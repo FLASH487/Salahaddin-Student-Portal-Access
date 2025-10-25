@@ -1,0 +1,134 @@
+
+:root {
+  --main-red: #7a0010;       
+  --dark-gray: #2f2f2f;      
+  --gold: #e6b800;           
+  --text-dark: #222;
+  --text-light: #fff;
+  --background: #f9f9f9;
+}
+
+
+body {
+   font-family: 'Poppins', 'Noto Sans Arabic', 'Noto Sans Kufi Arabic', sans-serif;
+  background: var(--background);
+  color: var(--text-dark);
+  width: 340px;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  background: var(--main-red);
+  color: var(--text-light);
+  padding: 14px;
+  border-bottom: 3px solid var(--gold);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+.title{
+  font-size: 20px;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+.logo:hover {
+  transform: rotate(5deg) scale(1.05);
+}
+
+.version {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+
+.lang-box {
+  text-align: center;
+  margin: 12px;
+}
+select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-weight: 500;
+}
+
+
+.content {
+  text-align: center;
+  padding: 15px;
+}
+#intro {
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+  margin-bottom: 10px;
+}
+
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.icon-link {
+  background: white;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: all 0.25s ease;
+  border-top: 4px solid var(--main-red);
+}
+.icon-link:hover {
+  transform: translateY(-4px);
+  border-top-color: var(--gold);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+.icon-link img {
+  width: 45px;
+  height: 45px;
+}
+.icon-link span {
+  display: block;
+  margin-top: 6px;
+  font-weight: 600;
+  color: var(--main-red);
+}
+
+
+.footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--dark-gray);
+  padding: 10px;
+  background: #fff;
+  border-top: 3px solid var(--main-red);
+}
+.footer p {
+  margin: 5px 0;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #1e1e1e;
+    color: #f8fafc;
+  }
+  .icon-link {
+    background: #2b2b2b;
+    color: #f8fafc;
+  }
+  .footer {
+    background: #2b2b2b;
+    color: #ddd;
+  }
+}
